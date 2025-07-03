@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .modal-box{
+            display: none;
+        }
+
+        .modal-box.show{
+            display: block;
+        }
+
+
+     
+        .modal{
+            position: fixed;
+            left: 0;
+            right: 0;
+            width: 800px;
+            height: 250px;
+            margin: 20px auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.536);
+           z-index: 1;
+
+        }
+        .modal-box .overlay{
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.381);
+
+
+        }
+
+        header,footer{
+            background-color: rgba(209, 26, 26, 0.877);
+            color: white;
+            width: 100%;
+            height: 30%;
+            font-size: 30px;
+            line-height: 50px;
+            padding-left: 20px;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding-right: 20px;
+        }
+        .content{
+            background-color: white;
+            width: 100%;
+            height: 40%;
+            padding-left: 20px;
+            padding-top: 20px;
+            line-height: 30px;
+        }
+        header .close{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Login</button>
+    <div class="modal-box">
+        <div class="modal">
+            <header>
+                Modal Header <span class="close">&times;</span>
+            </header>
+            <div class="content">
+                <p>Hello World!</p>
+                <p>Modals are awesome??</p>
+            </div>
+            <footer>
+                Modal Footer
+            </footer>
+        </div>
+
+        <div class="overlay"></div>
+    </div>
+    <script src="../js/modalHeader.js"></script>
+</body>
+</html>
