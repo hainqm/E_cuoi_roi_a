@@ -131,24 +131,12 @@ btnControl.addEventListener('click', function(){
 })
 
 
-
-//play - pause
-
-// var faSolid = btnControl.querySelector('i')
-// console.log(btnControl);
-
-// btnControl.addEventListener('click', function(){
-   
-//     if( faSolid.classList.contains('fa-play')){
-//         faSolid.classList.remove('fa-play');
-//         faSolid.classList.add('fa-pause');
-//         // console.log(faSolid);
-        
-//     }
-//     else{
-//         faSolid.classList.remove('fa-pause');
-//         faSolid.classList.add('fa-play');
-//     }
+//cập nhật thời gian chạy
+audio.addEventListener('timeupdate', function(){
+    time[0].innerText = getTime(audio.currentTime);//
+    //Lấy ra tỉ lệ % dựa vào currentTime và duration
+    var value = (audio.currentTime * 100) / audio.duration;
+    console.log(value);
+    handleProgressWidth(value);
     
-// })
-
+})
