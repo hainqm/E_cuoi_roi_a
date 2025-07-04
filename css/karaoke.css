@@ -19,21 +19,18 @@ body{
     justify-content: center;
 }
 .controls button{
+    color: white;
     border: none;
-    /* background-color: rgba(18, 8, 43, 0.71); */
+    line-height: 0px;
     font-size: 30px;
     cursor: pointer;
-    margin: 0;
-    padding: 0;
+    padding-top: 0px;
+    background: none;
+    
     
 
 }
 
-.controls button i{
-    background-color: rgba(18, 8, 43, 0.71);
-    border: none;
-
-}
 
 .player{
     width: 100%;
@@ -45,6 +42,7 @@ body{
 
 .player .time{
     margin:0px 20px;
+    color: white;
 }
 
 
@@ -52,8 +50,8 @@ body{
     position: relative;
     width: 90%;
     height: 10px;
-    background-color: rgba(83, 98, 98, 0.915);
-    box-shadow: 5px 5px 5px grey;
+    background-color: rgba(158, 177, 177, 0.849);
+    /* box-shadow: 5px 5px 5px grey; */
     margin-top:30px 20px;
     cursor: pointer;
 
@@ -63,7 +61,7 @@ body{
     position: absolute;
     inset: 0;
     width: 0%;
-    background-color: rgba(255, 68, 0, 0.981);
+    background-color: white;
 }
 
 
