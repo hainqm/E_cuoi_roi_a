@@ -19,7 +19,8 @@ progressBar.addEventListener('mousedown', function(e){
     value = ( offsetX * 100 ) / progressBarWidth;
     handleProgressWidth(value);
     // console.log(value);
-    
+
+    audio.currentTime = (value * audio.duration) / 100 ;
 })
 
 //chống nội bọt 
@@ -37,21 +38,6 @@ progressSpan.addEventListener('mousemove', function(e){
 
 
 
-// document.addEventListener('mousemove', function(e){
-//     if(isDown){
-        
-//         offsetX = e.offsetX ;
-        
-//         // console.log(offsetX);
-//         if(offsetX <= progressBarWidth){
-//             value = ( offsetX * 100 ) / progressBarWidth;
-//             handleProgressWidth(value);
-//             var progressMove = progress.style.width = `${value}%`;
-
-//             console.log(progressMove);
-//         }   
-//     }
-// })
 
 
 document.addEventListener('mousemove', function(e){
@@ -63,13 +49,18 @@ document.addEventListener('mousemove', function(e){
 
         value = (cursorX * 100) / progressBarWidth;
         handleProgressWidth(value);
+        
+
         // console.log(`value: ${value}%`);
+        audio.currentTime = (value * audio.duration) / 100 ;
+
     }
 });
 
 
 document.addEventListener('mouseup',function(e){
     isDown = false;
+   
 })
 
 
@@ -98,8 +89,6 @@ var getTime = function(seconds){
 
 //lắng nghe sự kiện load nhạc
 audio.addEventListener('loadeddata', function(){
-    
-    
     time[1].innerText = getTime(audio.duration);
     // console.log(audio.paused);
     
